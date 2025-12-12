@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { HERO_DATA } from '../constants';
 import { ArrowDown, Mail, Linkedin, Sparkles, Rocket, MousePointer2 } from 'lucide-react';
@@ -110,12 +111,12 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
 
                 {/* Main Card */}
                 <div className="relative w-full h-full bg-white dark:bg-ink-900 border-4 border-ink-950 dark:border-white rounded-[2rem] shadow-pop overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500 z-10 group">
-                    {/* Fallback image logic handled by checking error or using placeholder if needed, but keeping simple here as requested */}
+                    {/* Using a high-quality professional stock photo as requested for a 'formal' look */}
                     <img 
-                        src="miguel-leaf.png" 
+                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop"
                         alt="Miguel Ángel Jaenes" 
                         onError={(e) => {
-                            e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop"; // High quality fallback
+                            e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop"; 
                         }}
                         className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                     />
