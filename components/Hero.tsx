@@ -113,10 +113,10 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
                 <div className="relative w-full h-full bg-white dark:bg-ink-900 border-4 border-ink-950 dark:border-white rounded-[2rem] shadow-pop overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500 z-10 group">
                     {/* Using a high-quality professional stock photo as requested for a 'formal' look */}
                     <img 
-                        src="miguel-jaenes-profile.png"
+                        src="public/miguel-jaenes-profile.png"
                         alt="Miguel Ángel Jaenes" 
                         onError={(e) => {
-                            e.currentTarget.src = "miguel-jaenes-profile.png"; 
+                            e.currentTarget.src = "public/miguel-jaenes-profile.png"; 
                         }}
                         className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                     />
