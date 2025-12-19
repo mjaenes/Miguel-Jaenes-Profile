@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { HERO_DATA } from '../constants';
-import { ArrowDown, Mail, Linkedin, Sparkles, Rocket, MousePointer2 } from 'lucide-react';
+import { ArrowDown, Mail, Linkedin, Sparkles, Rocket, MousePointer2, FileText } from 'lucide-react';
 import { Language } from '../types';
 
 interface HeroProps {
@@ -52,37 +52,39 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
               }
             </p>
             
-            <div className="flex flex-wrap gap-6 items-center">
+            <div className="flex flex-wrap gap-4 items-center">
               {/* High Impact CTA */}
               <a 
                 href="#contact" 
-                className="group relative inline-flex items-center justify-center px-10 py-5 font-black text-white transition-all duration-300 rounded-2xl hover:scale-105 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-electric-violet/50"
+                className="group relative inline-flex items-center justify-center px-8 py-5 font-black text-white transition-all duration-300 rounded-2xl hover:scale-105 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-electric-violet/50"
                 style={{
-                    boxShadow: '6px 6px 0px 0px #8b5cf6', // electric-violet hard shadow
+                    boxShadow: '6px 6px 0px 0px #8b5cf6', 
                 }}
               >
-                {/* Animated Background */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-ink-950 to-indigo-900 dark:from-white dark:to-slate-200 overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full bg-white/10 transform -skew-x-12 -translate-x-full group-hover:animate-shine"></div>
                 </div>
-                
-                {/* Glow Effect behind */}
                 <div className="absolute -inset-3 bg-electric-violet/40 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
-
-                {/* Content */}
                 <span className="relative z-10 flex items-center gap-3 text-xl dark:text-ink-950">
                     <Rocket className="group-hover:animate-bounce" size={26} /> 
                     {content.cta}
                 </span>
               </a>
 
+              <button 
+                onClick={() => window.print()} // Fallback for demo, usually a link to PDF
+                className="px-8 py-5 bg-white dark:bg-ink-900 text-ink-950 dark:text-white border-2 border-ink-950 dark:border-white rounded-2xl font-bold text-lg hover:bg-slate-50 dark:hover:bg-ink-800 transition-all flex items-center gap-3 hover:shadow-pop"
+              >
+                <FileText size={22} className="text-electric-coral" /> {content.cvCta}
+              </button>
+
               <a 
                 href="https://linkedin.com/in/migueljaenes/" 
                 target="_blank" 
                 rel="noreferrer"
-                className="group px-8 py-4 bg-white dark:bg-ink-900 text-ink-950 dark:text-white border-2 border-ink-950 dark:border-white rounded-2xl font-bold text-lg hover:bg-slate-50 dark:hover:bg-ink-800 transition-all flex items-center gap-2 hover:border-electric-cyan hover:text-electric-cyan-700 dark:hover:text-electric-cyan hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] ring-0 hover:ring-2 hover:ring-electric-cyan/50"
+                className="p-5 bg-white dark:bg-ink-900 text-ink-950 dark:text-white border-2 border-ink-950 dark:border-white rounded-2xl font-bold text-lg hover:bg-slate-50 dark:hover:bg-ink-800 transition-all flex items-center justify-center hover:border-electric-cyan hover:text-electric-cyan-700 dark:hover:text-electric-cyan"
               >
-                <Linkedin size={24} className="group-hover:scale-110 transition-transform" /> LinkedIn
+                <Linkedin size={24} />
               </a>
             </div>
             
@@ -111,16 +113,14 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
 
                 {/* Main Card */}
                 <div className="relative w-full h-full bg-white dark:bg-ink-900 border-4 border-ink-950 dark:border-white rounded-[2rem] shadow-pop overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500 z-10 group">
-                    {/* Using a high-quality professional stock photo as requested for a 'formal' look */}
                     <img 
-                        src="/miguel-jaenes-profile.png"
+                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop"
                         alt="Miguel Ángel Jaenes" 
                         onError={(e) => {
-                            e.currentTarget.src = "/miguel-jaenes-profile.png"; 
+                            e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop"; 
                         }}
                         className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                     />
-                    {/* Gloss effect */}
                     <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
 

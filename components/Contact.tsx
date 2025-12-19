@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Mail, Linkedin, Send, Coffee } from 'lucide-react';
 import { Language } from '../types';
@@ -28,12 +29,23 @@ export const Contact: React.FC<ContactProps> = ({ language }) => {
     e.preventDefault();
     setIsSubmitting(true);
     
+    // Formar el mailto para que llegue a migueljaenes@gmail.com
+    const emailTo = "migueljaenes@gmail.com";
+    const subject = encodeURIComponent(`Nuevo mensaje de ${formData.name} (Portafolio Web)`);
+    const body = encodeURIComponent(
+      `Nombre: ${formData.name}\n` +
+      `Email: ${formData.email}\n\n` +
+      `Mensaje:\n${formData.message}`
+    );
+    
+    // Pequeño delay para feedback visual
     setTimeout(() => {
+      window.location.href = `mailto:${emailTo}?subject=${subject}&body=${body}`;
       setIsSubmitting(false);
       setIsSent(true);
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => setIsSent(false), 5000);
-    }, 1500);
+    }, 800);
   };
 
   return (

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon, Globe } from 'lucide-react';
 import { Language } from '../types';
@@ -41,10 +42,9 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, language, to
 
   const navLinks = [
     { name: language === 'es' ? 'Sobre Mí' : 'About Me', href: '#about' },
+    { name: language === 'es' ? 'Personal' : 'Personal', href: '#personal' },
     { name: language === 'es' ? 'Impacto' : 'Impact', href: '#achievements' },
-    { name: language === 'es' ? 'Proyectos' : 'Projects', href: '#projects' },
     { name: language === 'es' ? 'Experiencia' : 'Experience', href: '#experience' },
-    { name: language === 'es' ? 'Testimonios' : 'Testimonials', href: '#testimonials' },
     { name: language === 'es' ? 'Contacto' : 'Contact', href: '#contact' },
   ];
 
@@ -58,10 +58,9 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, language, to
         <div className={`relative w-full md:w-auto rounded-full transition-all duration-300 ${
             isScrolled ? 'p-[3px]' : 'p-0'
         }`}>
-            {/* Traveling Border Animation - Refactored for Continuous Loop */}
+            {/* Traveling Border Animation */}
             {isScrolled && (
                 <div className="absolute inset-0 rounded-full overflow-hidden pointer-events-none">
-                    {/* The spinner beam */}
                     <div className="absolute top-1/2 left-1/2 w-[200%] h-[1000%] bg-transparent -translate-x-1/2 -translate-y-1/2 animate-spin-slow" 
                         style={{
                             background: 'conic-gradient(from 0deg, transparent 0deg 90deg, #8b5cf6 120deg, #fb7185 180deg, #fde047 240deg, #a3e635 300deg, #22d3ee 330deg, transparent 360deg)'
@@ -76,12 +75,10 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, language, to
                   ? 'bg-white/95 dark:bg-ink-900/95 backdrop-blur-md shadow-sm' 
                   : 'bg-transparent'
             }`}>
-                {/* Brand Logo */}
                 <div className="font-serif font-black text-3xl md:text-4xl tracking-tight text-ink-900 dark:text-white transition-colors relative z-10">
                 MAJO<span className="text-electric-violet">.</span>
                 </div>
 
-                {/* Desktop Nav & Toggle */}
                 <div className="hidden md:flex items-center gap-6 relative z-10">
                   <nav className="flex gap-6 items-center">
                   {navLinks.map((link) => (
@@ -117,7 +114,6 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, language, to
                   </div>
                 </div>
 
-                {/* Mobile Menu & Toggle */}
                 <div className="flex items-center gap-4 md:hidden relative z-10">
                   <button 
                       onClick={toggleLanguage}
@@ -144,7 +140,6 @@ export const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, language, to
         </div>
       </div>
 
-      {/* Mobile Nav */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-4 right-4 mt-2 bg-white/95 dark:bg-ink-900/95 backdrop-blur-xl rounded-2xl border border-slate-100 dark:border-white/10 shadow-xl flex flex-col p-4 animate-slide-up z-50">
           {navLinks.map((link) => (

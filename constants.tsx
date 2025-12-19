@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ExperienceItem, SkillCategory, ProjectItem, TestimonialItem, LocalizedContent } from './types';
 import { 
@@ -5,7 +6,11 @@ import {
   Target, 
   Users, 
   Database, 
-  Globe
+  Globe,
+  Camera,
+  Plane,
+  BookOpen,
+  Coffee
 } from 'lucide-react';
 
 export const HERO_DATA: LocalizedContent<{
@@ -15,6 +20,7 @@ export const HERO_DATA: LocalizedContent<{
   intro: string;
   badge: string;
   cta: string;
+  cvCta: string;
   social: string;
   card1: string;
   card2: string;
@@ -26,6 +32,7 @@ export const HERO_DATA: LocalizedContent<{
     intro: "Especialista Senior en Paid Acquisition con más de 10 años de experiencia. Combino estrategia, datos y ejecución técnica para escalar volumen reduciendo costes en mercados competitivos (UK, ES, DK).",
     badge: "👋 Hola, soy Miguel A. Jaenes Ordóñez",
     cta: "Hablemos",
+    cvCta: "Descargar CV",
     social: "Gestionando +£12M anuales en mercados Top.",
     card1: "Especialista Adquisiciones",
     card2: "Experto PPC"
@@ -37,9 +44,37 @@ export const HERO_DATA: LocalizedContent<{
     intro: "Senior Paid Acquisition Specialist with 10+ years of experience. I combine strategy, data, and technical execution to scale volume while reducing costs in competitive markets (UK, ES, DK).",
     badge: "👋 Hi, I'm Miguel A. Jaenes Ordóñez",
     cta: "Let's Talk",
+    cvCta: "Download CV",
     social: "Managing +£12M/year in Top Markets.",
     card1: "Acquisition Specialist",
     card2: "PPC Expert"
+  }
+};
+
+export const PERSONAL_DATA: LocalizedContent<{
+  title: string;
+  subtitle: string;
+  items: { title: string; desc: string; icon: React.ReactNode; color: string }[];
+}> = {
+  es: {
+    title: "Mi Lado Humano",
+    subtitle: "Lo que me mueve cuando no estoy analizando ROAS.",
+    items: [
+      { title: "Viajero", desc: "Explorador de nuevas culturas y gastronomía.", icon: <Plane className="w-6 h-6" />, color: "bg-electric-cyan" },
+      { title: "Fotografía", desc: "Capturando momentos y luz.", icon: <Camera className="w-6 h-6" />, color: "bg-electric-coral" },
+      { title: "Lector", desc: "Ficción, historia y desarrollo personal.", icon: <BookOpen className="w-6 h-6" />, color: "bg-electric-lime" },
+      { title: "Café", desc: "En busca del espresso perfecto.", icon: <Coffee className="w-6 h-6" />, color: "bg-electric-yellow" }
+    ]
+  },
+  en: {
+    title: "My Human Side",
+    subtitle: "What moves me when I'm not analyzing ROAS.",
+    items: [
+      { title: "Traveler", desc: "Explorer of new cultures and gastronomy.", icon: <Plane className="w-6 h-6" />, color: "bg-electric-cyan" },
+      { title: "Photography", desc: "Capturing moments and light.", icon: <Camera className="w-6 h-6" />, color: "bg-electric-coral" },
+      { title: "Reader", desc: "Fiction, history, and personal growth.", icon: <BookOpen className="w-6 h-6" />, color: "bg-electric-lime" },
+      { title: "Coffee", desc: "Searching for the perfect espresso.", icon: <Coffee className="w-6 h-6" />, color: "bg-electric-yellow" }
+    ]
   }
 };
 
@@ -311,7 +346,7 @@ export const PROJECTS: LocalizedContent<ProjectItem[]> = {
       title: "UK PPC Web Transformation",
       description: "Complete restructuring of the Google Ads account for the UK market, moving from inefficient manual management to an automated value-based system.",
       technologies: ["Google Ads", "Smart Bidding", "SA360", "JavaScript Scripts", "Google Sheets"],
-      contribution: "Annual spend reduction from £3.8M to £2.08M (-45%) while maintaining conversion volume. Implementation of CPA pause scripts and total migration to Smart Bidding."
+      contribution: "Annual spend reduction from £3.8M to £2.08M (-45%) while maintaining conversion volume. Implementation of CPA slash scripts and total migration to Smart Bidding."
     },
     {
       title: "Google App Campaigns Scaling (GAC)",
@@ -401,6 +436,7 @@ export const UI_TEXT = {
     projectsTitle: ["Cosas que", "He Construido."],
     projectsImpact: "Impacto",
     testimonialsTitle: ["Lo que dicen", "por ahí."],
+    personalTitle: "Un Poco Sobre Mí",
     readMore: "Leer más",
     readLess: "Leer menos",
     viewLinkedIn: "Ver en LinkedIn",
@@ -436,6 +472,7 @@ export const UI_TEXT = {
     projectsTitle: ["Things", "I've Built."],
     projectsImpact: "Impact",
     testimonialsTitle: ["What they say", "out there."],
+    personalTitle: "A Bit About Me",
     readMore: "Read more",
     readLess: "Read less",
     viewLinkedIn: "View on LinkedIn",

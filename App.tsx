@@ -1,7 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { AboutMe } from './components/AboutMe';
+import { Personal } from './components/Personal';
 import { StatsSection } from './components/StatsSection';
 import { ValueProp } from './components/ValueProp';
 import { Projects } from './components/Projects';
@@ -57,6 +59,7 @@ function App() {
         <main>
           <Hero language={language} />
           <AboutMe language={language} />
+          <Personal language={language} />
           <StatsSection theme={theme} language={language} />
           <ValueProp language={language} />
           <Projects language={language} />
