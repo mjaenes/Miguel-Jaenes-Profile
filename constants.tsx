@@ -404,7 +404,7 @@ export const TESTIMONIALS: LocalizedContent<TestimonialItem[]> = {
       company: "Google Ads SME"
     },
     {
-      quote: "I had the pleasure of counting on Miguel as part of my Paid Search team, where he stood out for his disposition and excellent attitude. He always showed initiative to assume new challenges and provide solutions, plus a positive energy that made working with him very easy. His ability to adapt, learn quickly, and collaborate with the team makes him a great asset to any company. I would definitely recommend him to any digital marketing team looking for a good professional.",
+      quote: "I had the pleasure of counting on Miguel as part of my Paid Search team, where he stood out for his disposition and excellent attitude. He always showed initiative to assume new challenges and provide solutions, plus a positive energy that made working with him very easy. His ability to adapt, learn quickly, and collaborate with the team makes them a great asset to any company. I would definitely recommend him to any digital marketing team looking for a good professional.",
       author: "Carmen Aguera",
       role: "Digital Marketing Lead",
       company: "Performance Marketing"
@@ -451,7 +451,7 @@ export const UI_TEXT = {
       messagePlaceholder: "Cuéntame tu idea...",
       submit: "Enviar",
       sending: "Enviando...",
-      success: "🚀 ¡Recibido! Hablamos pronto."
+      success: "¡Recibido! Hablamos pronto."
     },
     footer: "Hecho con 💜 y mucho café."
   },
@@ -487,7 +487,7 @@ export const UI_TEXT = {
       messagePlaceholder: "Tell me your idea...",
       submit: "Send",
       sending: "Sending...",
-      success: "🚀 Received! Talk soon."
+      success: "Received! Talk soon."
     },
     footer: "Made with 💜 and lots of coffee."
   }

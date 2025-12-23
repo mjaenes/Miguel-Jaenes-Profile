@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
   <head>
@@ -104,6 +105,114 @@
       .no-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
+      }
+
+      /* PRINT STYLES - PROFESSIONAL CV FORMAT */
+      @media print {
+        @page {
+          margin: 1.5cm;
+          size: A4;
+        }
+
+        body {
+          background: white !important;
+          color: black !important;
+          font-size: 10pt;
+          background-image: none !important;
+        }
+
+        /* Hide interactive/flashy elements */
+        header, 
+        footer, 
+        #personal, 
+        button, 
+        nav, 
+        .animate-marquee, 
+        .animate-blob,
+        [class*='shadow-pop'],
+        .recharts-responsive-container,
+        .social-links,
+        .bg-mesh,
+        #contact,
+        .stickers {
+          display: none !important;
+        }
+
+        /* Reset layouts */
+        section {
+          padding: 0 !important;
+          margin-bottom: 2rem !important;
+          page-break-inside: avoid;
+          display: block !important;
+        }
+
+        .container {
+          max-width: 100% !important;
+          width: 100% !important;
+          padding: 0 !important;
+        }
+
+        /* Hero to Header conversion */
+        #home {
+          min-height: auto !important;
+          padding-top: 0 !important;
+          text-align: left;
+          border-bottom: 2px solid #eee;
+          margin-bottom: 2rem !important;
+        }
+
+        #home h1 {
+          font-size: 24pt !important;
+          color: black !important;
+          margin-bottom: 0.5rem !important;
+        }
+
+        #home p {
+          font-size: 12pt !important;
+          color: #444 !important;
+        }
+
+        /* Stats to Simple Text */
+        #achievements .grid {
+          display: flex !important;
+          flex-direction: row !important;
+          gap: 2rem !important;
+        }
+
+        #achievements h3, #achievements .bg-white {
+          border: none !important;
+          box-shadow: none !important;
+          padding: 0 !important;
+        }
+
+        /* Experience and Projects */
+        .bg-paper-50, .bg-white, .dark\:bg-ink-900 {
+          background: transparent !important;
+          border: none !important;
+          padding: 0 !important;
+          margin-bottom: 1.5rem !important;
+        }
+
+        h3, h4 {
+          color: black !important;
+          text-transform: uppercase;
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 4pt;
+          margin-bottom: 10pt !important;
+        }
+
+        .text-electric-violet, .text-electric-coral, .text-electric-cyan {
+          color: black !important;
+        }
+
+        /* Grid resets */
+        .grid {
+          display: block !important;
+        }
+
+        li {
+          page-break-inside: avoid;
+        }
       }
     </style>
   <script type="importmap">
