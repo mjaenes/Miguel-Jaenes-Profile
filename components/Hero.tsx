@@ -114,7 +114,7 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
                 {/* Main Card */}
                 <div className="relative w-full h-full bg-white dark:bg-ink-900 border-4 border-ink-950 dark:border-white rounded-[2rem] shadow-pop overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500 z-10 group">
                     <img 
-                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop"
+                        src="/public/miguel-jaenes-profile.png"
                         alt="Miguel Ángel Jaenes" 
                         onError={(e) => {
                             e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop"; 
