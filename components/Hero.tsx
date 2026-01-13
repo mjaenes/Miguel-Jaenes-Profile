@@ -72,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
               </a>
 
               <button 
-                onClick={() => window.print()} // Fallback for demo, usually a link to PDF
+                onClick={() => window.print()} 
                 className="px-8 py-5 bg-white dark:bg-ink-900 text-ink-950 dark:text-white border-2 border-ink-950 dark:border-white rounded-2xl font-bold text-lg hover:bg-slate-50 dark:hover:bg-ink-800 transition-all flex items-center gap-3 hover:shadow-pop"
               >
                 <FileText size={22} className="text-electric-coral" /> {content.cvCta}
@@ -116,9 +116,6 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
                     <img 
                         src="/public/miguel-jaenes-profile.png"
                         alt="Miguel Ángel Jaenes" 
-                        onError={(e) => {
-                            e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop"; 
-                        }}
                         className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

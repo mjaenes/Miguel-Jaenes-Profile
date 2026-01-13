@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ABOUT_ME } from '../constants';
 import { Quote } from 'lucide-react';
@@ -44,7 +45,7 @@ export const AboutMe: React.FC<AboutMeProps> = ({ language }) => {
                     <img 
                         src={content.image} 
                         alt="Miguel Working" 
-                        className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                        className="w-full h-auto object-cover transition-all duration-500"
                     />
                  </div>
 
