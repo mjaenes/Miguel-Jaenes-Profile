@@ -91,7 +91,7 @@ export const ABOUT_ME: LocalizedContent<{
     label: "Historia",
     story: "Si tuviera que resumir mi trayectoria en una palabra, sería transformación. A lo largo de mi carrera en UK y España, he evolucionado de la ejecución táctica al liderazgo estratégico, descubriendo que mi verdadera fortaleza reside en conectar mundos que a menudo no se hablan: Tecnología y Negocio. No me conformo con gestionar campañas; construyo sistemas escalables.",
     philosophy: "Para mí, el marketing de adquisición no va de pujar más alto… va de entender mejor.",
-    image: "/miguel-jaenes-personal.png",
+    image: "./miguel-jaenes-personal.png",
     highlights: [
       { text: "Curiosidad Infinita", color: "bg-electric-lime" },
       { text: "Resolución Creativa", color: "bg-electric-violet text-white" },
@@ -103,7 +103,7 @@ export const ABOUT_ME: LocalizedContent<{
     label: "My Story",
     story: "If I had to summarize my career in one word, it would be transformation. Throughout my career in the UK and Spain, I have evolved from tactical execution to strategic leadership, discovering that my true strength lies in connecting worlds that often don't speak the same language: Technology and Business. I don't just manage campaigns; I build scalable systems.",
     philosophy: "For me, acquisition marketing isn't about bidding higher... it's about understanding better.",
-    image: "/miguel-jaenes-personal.png",
+    image: "./miguel-jaenes-personal.png",
     highlights: [
       { text: "Infinite Curiosity", color: "bg-electric-lime" },
       { text: "Creative Solving", color: "bg-electric-violet text-white" },

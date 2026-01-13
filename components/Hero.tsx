@@ -114,7 +114,7 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
                 {/* Main Card */}
                 <div className="relative w-full h-full bg-white dark:bg-ink-900 border-4 border-ink-950 dark:border-white rounded-[2rem] shadow-pop overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500 z-10 group">
                     <img 
-                        src="/miguel-jaenes-profile.png"
+                        src="./miguel-jaenes-profile.png"
                         alt="Miguel Ángel Jaenes" 
                         className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                     />
