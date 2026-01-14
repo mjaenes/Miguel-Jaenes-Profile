@@ -1,37 +1,46 @@
 
 import React, { useState, useEffect } from 'react';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { AboutMe } from './components/AboutMe';
-import { Personal } from './components/Personal';
-import { StatsSection } from './components/StatsSection';
-import { ValueProp } from './components/ValueProp';
-import { Projects } from './components/Projects';
-import { Skills } from './components/Skills';
-import { ExperienceTimeline } from './components/ExperienceTimeline';
-import { Testimonials } from './components/Testimonials';
-import { Contact } from './components/Contact';
-import { Language } from './types';
+import { Header } from './components/Header.tsx';
+import { Hero } from './components/Hero.tsx';
+import { AboutMe } from './components/AboutMe.tsx';
+import { Personal } from './components/Personal.tsx';
+import { StatsSection } from './components/StatsSection.tsx';
+import { ValueProp } from './components/ValueProp.tsx';
+import { Projects } from './components/Projects.tsx';
+import { Skills } from './components/Skills.tsx';
+import { ExperienceTimeline } from './components/ExperienceTimeline.tsx';
+import { Testimonials } from './components/Testimonials.tsx';
+import { Contact } from './components/Contact.tsx';
+import { Language } from './types.ts';
 
 function App() {
   const [theme, setTheme] = useState('light');
   const [language, setLanguage] = useState<Language>('es');
 
   useEffect(() => {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      setTheme('dark');
-    } else {
+    try {
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        setTheme('dark');
+      } else {
+        setTheme('light');
+      }
+    } catch (e) {
+      console.warn("No se pudo acceder a localStorage o matchMedia:", e);
       setTheme('light');
     }
   }, []);
 
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.theme = 'light';
+    try {
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light';
+      }
+    } catch (e) {
+      // Ignorar errores de localStorage en entornos restringidos
     }
   }, [theme]);
 

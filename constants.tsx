@@ -28,26 +28,26 @@ export const HERO_DATA: LocalizedContent<{
   es: {
     name: "Miguel Ángel Jaenes Ordóñez",
     title: "Performance Marketing | Paid Media | User Acquisition | Growth",
-    tagline: "Transformando estructuras complejas en sistemas de adquisición eficientes y predecibles.",
-    intro: "Especialista Senior en Paid Acquisition con más de 10 años de experiencia. Combino estrategia, datos y ejecución técnica para escalar volumen reduciendo costes en mercados competitivos (UK, ES, DK).",
-    badge: "👋 Hola, soy Miguel A. Jaenes Ordóñez",
-    cta: "Hablemos",
-    cvCta: "Descargar CV",
-    social: "Gestionando +£12M anuales en mercados Top.",
-    card1: "Especialista Adquisiciones",
-    card2: "Experto PPC"
+    tagline: "Especialista en convertir datos complejos en rentabilidad y crecimiento escalable.",
+    intro: "Senior Paid Acquisition Specialist con más de 10 años de experiencia liderando estrategias en mercados competitivos. Experto en optimización de presupuestos millonarios y arquitecturas de datos para marketing.",
+    badge: "👋 Miguel A. Jaenes Ordóñez",
+    cta: "Contactar ahora",
+    cvCta: "Descargar Currículum",
+    social: "Gestionando presupuestos de +£12M/año.",
+    card1: "Growth Strategy",
+    card2: "Data Analytics"
   },
   en: {
     name: "Miguel Ángel Jaenes Ordóñez",
     title: "Performance Marketing | Paid Media | User Acquisition | Growth",
-    tagline: "Transforming complex structures into efficient and predictable acquisition systems.",
-    intro: "Senior Paid Acquisition Specialist with 10+ years of experience. I combine strategy, data, and technical execution to scale volume while reducing costs in competitive markets (UK, ES, DK).",
-    badge: "👋 Hi, I'm Miguel A. Jaenes Ordóñez",
-    cta: "Let's Talk",
+    tagline: "Specialist in turning complex data into profitability and scalable growth.",
+    intro: "Senior Paid Acquisition Specialist with 10+ years of experience leading strategies in competitive markets. Expert in multi-million budget optimization and marketing data architectures.",
+    badge: "👋 Miguel A. Jaenes Ordóñez",
+    cta: "Contact me",
     cvCta: "Download CV",
-    social: "Managing +£12M/year in Top Markets.",
-    card1: "Acquisition Specialist",
-    card2: "PPC Expert"
+    social: "Managing +£12M/year budgets.",
+    card1: "Growth Strategy",
+    card2: "Data Analytics"
   }
 };
 
@@ -57,23 +57,23 @@ export const PERSONAL_DATA: LocalizedContent<{
   items: { title: string; desc: string; icon: React.ReactNode; color: string }[];
 }> = {
   es: {
-    title: "Mi Lado Humano",
-    subtitle: "Lo que me mueve cuando no estoy analizando ROAS.",
+    title: "Vida más allá de los datos",
+    subtitle: "Mis pasiones y lo que me mantiene inspirado.",
     items: [
-      { title: "Viajero", desc: "Explorador de nuevas culturas y gastronomía.", icon: <Plane className="w-6 h-6" />, color: "bg-electric-cyan" },
-      { title: "Fotografía", desc: "Capturando momentos y luz.", icon: <Camera className="w-6 h-6" />, color: "bg-electric-coral" },
-      { title: "Lector", desc: "Ficción, historia y desarrollo personal.", icon: <BookOpen className="w-6 h-6" />, color: "bg-electric-lime" },
-      { title: "Café", desc: "En busca del espresso perfecto.", icon: <Coffee className="w-6 h-6" />, color: "bg-electric-yellow" }
+      { title: "Viajero", desc: "Explorador de nuevas culturas y gastronomía internacional.", icon: <Plane className="w-6 h-6" />, color: "bg-electric-cyan" },
+      { title: "Fotografía", desc: "Capturando la esencia de los momentos y la luz natural.", icon: <Camera className="w-6 h-6" />, color: "bg-electric-coral" },
+      { title: "Lector", desc: "Apasionado de la historia, la ficción y el crecimiento personal.", icon: <BookOpen className="w-6 h-6" />, color: "bg-electric-lime" },
+      { title: "Café", desc: "En una misión constante por encontrar el espresso perfecto.", icon: <Coffee className="w-6 h-6" />, color: "bg-electric-yellow" }
     ]
   },
   en: {
-    title: "My Human Side",
-    subtitle: "What moves me when I'm not analyzing ROAS.",
+    title: "Life beyond data",
+    subtitle: "My passions and what keeps me inspired.",
     items: [
-      { title: "Traveler", desc: "Explorer of new cultures and gastronomy.", icon: <Plane className="w-6 h-6" />, color: "bg-electric-cyan" },
-      { title: "Photography", desc: "Capturing moments and light.", icon: <Camera className="w-6 h-6" />, color: "bg-electric-coral" },
-      { title: "Reader", desc: "Fiction, history, and personal growth.", icon: <BookOpen className="w-6 h-6" />, color: "bg-electric-lime" },
-      { title: "Coffee", desc: "Searching for the perfect espresso.", icon: <Coffee className="w-6 h-6" />, color: "bg-electric-yellow" }
+      { title: "Traveler", desc: "Explorer of new cultures and international gastronomy.", icon: <Plane className="w-6 h-6" />, color: "bg-electric-cyan" },
+      { title: "Photography", desc: "Capturing the essence of moments and natural light.", icon: <Camera className="w-6 h-6" />, color: "bg-electric-coral" },
+      { title: "Reader", desc: "Passionate about history, fiction, and personal growth.", icon: <BookOpen className="w-6 h-6" />, color: "bg-electric-lime" },
+      { title: "Coffee", desc: "On a constant mission to find the perfect espresso.", icon: <Coffee className="w-6 h-6" />, color: "bg-electric-yellow" }
     ]
   }
 };
@@ -87,27 +87,27 @@ export const ABOUT_ME: LocalizedContent<{
   highlights: { text: string; color: string }[];
 }> = {
   es: {
-    title: "Más allá del CV",
-    label: "Historia",
-    story: "Si tuviera que resumir mi trayectoria en una palabra, sería transformación. A lo largo de mi carrera en UK y España, he evolucionado de la ejecución táctica al liderazgo estratégico, descubriendo que mi verdadera fortaleza reside en conectar mundos que a menudo no se hablan: Tecnología y Negocio. No me conformo con gestionar campañas; construyo sistemas escalables.",
-    philosophy: "Para mí, el marketing de adquisición no va de pujar más alto… va de entender mejor.",
-    image: "./miguel-jaenes-personal.png",
+    title: "Experiencia y Visión",
+    label: "Mi trayectoria",
+    story: "Mi carrera se define por la transformación. De la ejecución técnica al liderazgo estratégico, he unido tecnología y negocio para crear sistemas de adquisición predecibles. En mercados como UK, España y Dinamarca, he demostrado que el éxito no reside en gastar más, sino en entender mejor los datos.",
+    philosophy: "El marketing de resultados no es magia, es una mezcla de curiosidad, técnica y rigor analítico.",
+    image: "miguel-jaenes-personal.png",
     highlights: [
-      { text: "Curiosidad Infinita", color: "bg-electric-lime" },
-      { text: "Resolución Creativa", color: "bg-electric-violet text-white" },
-      { text: "Visión Global", color: "bg-electric-coral text-white" }
+      { text: "Curiosidad", color: "bg-electric-lime" },
+      { text: "Estrategia", color: "bg-electric-violet text-white" },
+      { text: "Resultados", color: "bg-electric-coral text-white" }
     ]
   },
   en: {
-    title: "Beyond the CV",
-    label: "My Story",
-    story: "If I had to summarize my career in one word, it would be transformation. Throughout my career in the UK and Spain, I have evolved from tactical execution to strategic leadership, discovering that my true strength lies in connecting worlds that often don't speak the same language: Technology and Business. I don't just manage campaigns; I build scalable systems.",
-    philosophy: "For me, acquisition marketing isn't about bidding higher... it's about understanding better.",
-    image: "./miguel-jaenes-personal.png",
+    title: "Experience and Vision",
+    label: "My path",
+    story: "My career is defined by transformation. From technical execution to strategic leadership, I have bridged technology and business to create predictable acquisition systems. In markets like the UK, Spain, and Denmark, I have proven that success isn't about spending more, but about understanding data better.",
+    philosophy: "Performance marketing isn't magic; it's a blend of curiosity, technique, and analytical rigor.",
+    image: "miguel-jaenes-personal.png",
     highlights: [
-      { text: "Infinite Curiosity", color: "bg-electric-lime" },
-      { text: "Creative Solving", color: "bg-electric-violet text-white" },
-      { text: "Global Vision", color: "bg-electric-coral text-white" }
+      { text: "Curiosity", color: "bg-electric-lime" },
+      { text: "Strategy", color: "bg-electric-violet text-white" },
+      { text: "Results", color: "bg-electric-coral text-white" }
     ]
   }
 };
@@ -119,45 +119,45 @@ export const VALUE_PROP: LocalizedContent<{
   pillars: { title: string; desc: string; icon: React.ReactNode }[];
 }> = {
   es: {
-    title: "El Perfil",
-    highlight: "Puente",
-    description: "Mi principal activo es la capacidad para traducir objetivos de negocio en ejecuciones técnicas complejas, actuando como nexo entre departamentos.",
+    title: "Mi Propuesta de",
+    highlight: "Valor",
+    description: "Actúo como el puente necesario entre los objetivos comerciales de alto nivel y la ejecución técnica granular.",
     pillars: [
       {
-        title: "Estratega",
-        desc: "Entiendo producto, data, negocio y cliente (MBA, LTV, Rentabilidad).",
+        title: "Visión de Negocio",
+        desc: "Comprensión profunda de LTV, CPA y rentabilidad real (MBA mindset).",
         icon: <Users className="w-6 h-6" />
       },
       {
-        title: "Técnico",
-        desc: "Domino los canales, el código, las integraciones CRM y la automatización.",
+        title: "Dominio Técnico",
+        desc: "Experto en plataformas publicitarias, tracking avanzado y automatización.",
         icon: <Database className="w-6 h-6" />
       },
       {
-        title: "Analítico",
-        desc: "Tomo decisiones basadas en insights reales, cohortes y modelos de atribución.",
+        title: "Análisis Crítico",
+        desc: "Capacidad para extraer 'insights' accionables de grandes volúmenes de datos.",
         icon: <BarChart3 className="w-6 h-6" />
       }
     ]
   },
   en: {
-    title: "The",
-    highlight: "Bridge Profile",
-    description: "My main asset is the ability to translate business objectives into complex technical executions, acting as a nexus between departments.",
+    title: "My Value",
+    highlight: "Proposition",
+    description: "I act as the necessary bridge between high-level business goals and granular technical execution.",
     pillars: [
       {
-        title: "Strategist",
-        desc: "I understand product, data, business, and client (MBA, LTV, Profitability).",
+        title: "Business Vision",
+        desc: "Deep understanding of LTV, CPA, and real profitability (MBA mindset).",
         icon: <Users className="w-6 h-6" />
       },
       {
-        title: "Technical",
-        desc: "I master channels, code, CRM integrations, and automation.",
+        title: "Technical Mastery",
+        desc: "Expert in advertising platforms, advanced tracking, and automation.",
         icon: <Database className="w-6 h-6" />
       },
       {
-        title: "Analytical",
-        desc: "I make decisions based on real insights, cohorts, and attribution models.",
+        title: "Critical Analysis",
+        desc: "Ability to extract actionable insights from large data volumes.",
         icon: <BarChart3 className="w-6 h-6" />
       }
     ]
@@ -398,7 +398,7 @@ export const TESTIMONIALS: LocalizedContent<TestimonialItem[]> = {
       company: ""
     },
     {
-      quote: "Miguel and I have worked together during this time, and I can say that he has been a true professional in all aspects. When he has assumed leadership roles, he has done so with impressive skill and confidence, proving to be an exceptional leader. He has also been an excellent coworker, always willing to collaborate and share his knowledge. I have learned a lot from him and greatly value his ability to create a positive and productive work environment. Without a doubt, Miguel is a valuable asset to any team and I highly recommend him.",
+      quote: "Miguel and I have worked together during this time, and I can say that he has been a true professional in all aspects. When he has assumed leadership roles, he has done so with impressive skill and confidence, proving to be an exceptional leader. He has also been an excellent coworker, always willing to collaborate and share his knowledge. I have learned a lot from him and greatly value his ability to create a positive and productivework environment. Without a doubt, Miguel is a valuable asset to any team and I highly recommend him.",
       author: "Álvaro Jiménez García",
       role: "Digital Marketing Executive",
       company: "Google Ads SME"
@@ -420,75 +420,75 @@ export const TESTIMONIALS: LocalizedContent<TestimonialItem[]> = {
 
 export const UI_TEXT = {
   es: {
-    statsTitle: "Resultados Reales",
-    statsHeading: ["Menos Gasto,", "Más Crecimiento."],
+    statsTitle: "Casos de Éxito",
+    statsHeading: ["Menos Gasto,", "Más Resultados."],
     statsLabels: {
-      reduction: "Reducción de Gasto",
-      growth: "Crecimiento YoY",
-      payback: "Payback"
+      reduction: "Ahorro de Presupuesto",
+      growth: "Crecimiento de Usuarios",
+      payback: "Retorno de Inversión"
     },
     charts: {
-      spend: "Gasto vs Eficiencia",
-      acquisition: "Adquisición (NDPs)"
+      spend: "Gasto vs Rendimiento",
+      acquisition: "Captación Mensual"
     },
-    skillsTitle: "Mi Caja de Herramientas",
-    experienceTitle: "Trayectoria",
-    projectsTitle: ["Cosas que", "He Construido."],
-    projectsImpact: "Impacto",
-    testimonialsTitle: ["Lo que dicen", "por ahí."],
-    personalTitle: "Un Poco Sobre Mí",
+    skillsTitle: "Tecnología y Aptitudes",
+    experienceTitle: "Mi Recorrido Profesional",
+    projectsTitle: ["Impacto Directo", "en Negocio."],
+    projectsImpact: "Resultado Clave",
+    testimonialsTitle: ["Lo que dicen", "mis compañeros."],
+    personalTitle: "Un poco más de mí",
     readMore: "Leer más",
-    readLess: "Leer menos",
-    viewLinkedIn: "Ver en LinkedIn",
-    contactTitle: ["¿Creamos algo", "increíble?"],
-    contactDesc: "Estoy listo para el siguiente reto. Si buscas a alguien que entienda el negocio y domine la técnica, soy tu persona.",
+    readLess: "Cerrar",
+    viewLinkedIn: "Ver perfil completo",
+    contactTitle: ["¿Hablamos del", "siguiente paso?"],
+    contactDesc: "Si buscas un perfil híbrido que entienda el negocio y domine la ejecución técnica, escríbeme.",
     form: {
       name: "Nombre",
-      namePlaceholder: "Tu nombre genial",
-      email: "Email",
+      namePlaceholder: "Escribe tu nombre...",
+      email: "Correo electrónico",
       emailPlaceholder: "tu@email.com",
       message: "Mensaje",
-      messagePlaceholder: "Cuéntame tu idea...",
-      submit: "Enviar",
+      messagePlaceholder: "¿Cómo puedo ayudarte?",
+      submit: "Enviar mensaje",
       sending: "Enviando...",
-      success: "¡Recibido! Hablamos pronto."
+      success: "¡Mensaje enviado con éxito!"
     },
-    footer: "Hecho con 💜 y mucho café."
+    footer: "Diseñado con enfoque en resultados."
   },
   en: {
-    statsTitle: "Real Results",
-    statsHeading: ["Less Spend,", "More Growth."],
+    statsTitle: "Success Stories",
+    statsHeading: ["Less Spend,", "More Results."],
     statsLabels: {
-      reduction: "Spend Reduction",
-      growth: "YoY Growth",
-      payback: "Payback"
+      reduction: "Budget Saving",
+      growth: "User Growth",
+      payback: "Return on Investment"
     },
     charts: {
-      spend: "Spend vs Efficiency",
-      acquisition: "Acquisition (NDPs)"
+      spend: "Spend vs Performance",
+      acquisition: "Monthly Acquisition"
     },
-    skillsTitle: "My Toolkit",
-    experienceTitle: "Career Path",
-    projectsTitle: ["Things", "I've Built."],
-    projectsImpact: "Impact",
-    testimonialsTitle: ["What they say", "out there."],
-    personalTitle: "A Bit About Me",
+    skillsTitle: "Tech & Expertise",
+    experienceTitle: "Professional Journey",
+    projectsTitle: ["Direct", "Business Impact."],
+    projectsImpact: "Key Result",
+    testimonialsTitle: ["What", "they say."],
+    personalTitle: "A bit more about me",
     readMore: "Read more",
-    readLess: "Read less",
-    viewLinkedIn: "View on LinkedIn",
-    contactTitle: ["Let's build something", "incredible?"],
-    contactDesc: "I'm ready for the next challenge. If you're looking for someone who understands business and masters technique, I'm your person.",
+    readLess: "Close",
+    viewLinkedIn: "View full profile",
+    contactTitle: ["Let's talk about the", "next step?"],
+    contactDesc: "If you are looking for a hybrid profile that understands business and masters technical execution, write to me.",
     form: {
       name: "Name",
-      namePlaceholder: "Your cool name",
+      namePlaceholder: "Type your name...",
       email: "Email",
       emailPlaceholder: "you@email.com",
       message: "Message",
-      messagePlaceholder: "Tell me your idea...",
-      submit: "Send",
+      messagePlaceholder: "How can I help you?",
+      submit: "Send message",
       sending: "Sending...",
-      success: "Received! Talk soon."
+      success: "Message sent successfully!"
     },
-    footer: "Made with 💜 and lots of coffee."
+    footer: "Designed with a results-oriented approach."
   }
 };

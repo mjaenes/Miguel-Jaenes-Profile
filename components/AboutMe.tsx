@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { ABOUT_ME } from '../constants';
-import { Quote } from 'lucide-react';
+import { Quote, User } from 'lucide-react';
 import { Language } from '../types';
 
 interface AboutMeProps {
@@ -11,41 +11,30 @@ interface AboutMeProps {
 export const AboutMe: React.FC<AboutMeProps> = ({ language }) => {
   const content = ABOUT_ME[language];
 
-  // Helper to highlight specific words
-  const renderStory = (text: string) => {
-    const targetWord = language === 'es' ? 'transformación' : 'transformation';
-    const parts = text.split(new RegExp(`(${targetWord})`, 'gi'));
-    
-    return parts.map((part, index) => {
-      if (part.toLowerCase() === targetWord.toLowerCase()) {
-        return (
-          <span key={index} className="relative inline-block px-1 mx-1">
-             <span className="absolute inset-0 bg-electric-lime transform -skew-x-12 rounded-sm -z-10"></span>
-             <span className="font-black text-ink-950 relative z-10">{part}</span>
-          </span>
-        );
-      }
-      return <span key={index}>{part}</span>;
-    });
-  };
-
   return (
-    <section id="about" className="py-24 relative">
+    <section id="about" className="py-32 relative">
       <div className="container mx-auto px-6 relative z-10">
         
-        <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+        <div className="flex flex-col md:flex-row items-center gap-16 lg:gap-24">
             
-            {/* Visual Side */}
+            {/* Visual Side with Placeholder */}
             <div className="md:w-5/12 relative group">
-                 {/* Decorative background shape */}
-                 <div className="absolute inset-0 bg-electric-yellow transform rotate-3 rounded-[2rem] shadow-pop group-hover:rotate-6 transition-transform duration-500"></div>
+                 <div className="absolute inset-0 bg-electric-yellow transform rotate-3 rounded-[2.5rem] shadow-pop group-hover:rotate-6 transition-transform duration-500"></div>
                  
-                 {/* Image Container */}
-                 <div className="relative bg-white dark:bg-ink-900 border-4 border-ink-950 dark:border-white rounded-[2rem] overflow-hidden transform -rotate-3 group-hover:rotate-0 transition-transform duration-500 shadow-sm">
+                 <div className="relative bg-slate-200 dark:bg-ink-800 border-4 border-ink-950 dark:border-white rounded-[2.5rem] overflow-hidden transform -rotate-3 group-hover:rotate-0 transition-all duration-500 shadow-sm flex items-center justify-center min-h-[400px]">
+                    
+                    {/* Placeholder Icon */}
+                    <div className="absolute inset-0 flex items-center justify-center text-slate-400 dark:text-slate-600 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-ink-900 dark:to-ink-800">
+                        <User size={80} strokeWidth={1} className="opacity-30" />
+                    </div>
+
                     <img 
-                        src={content.image} 
-                        alt="Miguel Working" 
-                        className="w-full h-auto object-cover transition-all duration-500"
+                        src="miguel-jaenes-personal.png" 
+                        alt="Miguel Ángel Working" 
+                        className="relative z-10 w-full h-auto object-cover transition-all duration-500"
+                        onError={(e) => {
+                           console.warn("Imagen personal no encontrada en la raíz.");
+                        }}
                     />
                  </div>
 
@@ -54,11 +43,11 @@ export const AboutMe: React.FC<AboutMeProps> = ({ language }) => {
                     <div 
                         key={idx}
                         className={`absolute ${
-                            idx === 0 ? '-top-4 -left-4 rotate-[-10deg]' : 
-                            idx === 1 ? 'top-1/2 -right-8 rotate-[5deg]' : 
-                            '-bottom-4 left-8 rotate-[-5deg]'
-                        } px-4 py-2 ${item.color} border-2 border-ink-950 shadow-pop text-ink-950 font-black text-xs uppercase tracking-wider z-10 animate-float`}
-                        style={{ animationDelay: `${idx * 1}s` }}
+                            idx === 0 ? '-top-6 -left-6 rotate-[-10deg]' : 
+                            idx === 1 ? 'top-1/2 -right-10 rotate-[5deg]' : 
+                            '-bottom-6 left-12 rotate-[-5deg]'
+                        } px-6 py-3 ${item.color} border-2 border-ink-950 shadow-pop text-ink-950 font-black text-sm uppercase tracking-wider z-20 animate-float`}
+                        style={{ animationDelay: `${idx * 1.5}s` }}
                     >
                         {item.text}
                     </div>
@@ -67,23 +56,23 @@ export const AboutMe: React.FC<AboutMeProps> = ({ language }) => {
 
             {/* Content Side */}
             <div className="md:w-7/12">
-                <div className="inline-block px-3 py-1 bg-electric-cyan text-ink-950 text-sm font-bold uppercase tracking-widest mb-6 rounded-lg border-2 border-ink-950 shadow-pop-sm transform -rotate-1">
+                <div className="inline-block px-4 py-2 bg-electric-cyan text-ink-950 text-xs font-black uppercase tracking-widest mb-8 rounded-lg border-2 border-ink-950 shadow-pop-sm transform -rotate-1">
                     {content.label}
                 </div>
                 
-                <h3 className="text-5xl md:text-6xl font-serif font-black text-ink-950 dark:text-white mb-8 leading-tight">
+                <h3 className="text-5xl md:text-6xl font-serif font-black text-ink-950 dark:text-white mb-10 leading-none">
                     {content.title}
                 </h3>
 
-                <div className="prose prose-lg dark:prose-invert">
-                    <p className="text-xl text-slate-700 dark:text-slate-200 mb-8 leading-relaxed font-medium">
-                        {renderStory(content.story)}
+                <div className="prose prose-xl dark:prose-invert max-w-none">
+                    <p className="text-xl text-slate-700 dark:text-slate-200 mb-10 leading-relaxed font-medium">
+                        {content.story}
                     </p>
                 </div>
 
-                <div className="bg-paper-100 dark:bg-ink-800 p-8 rounded-3xl border-l-8 border-electric-coral relative mt-8">
-                    <Quote className="absolute top-4 right-4 text-electric-coral opacity-20" size={40} />
-                    <p className="text-2xl font-serif italic text-ink-950 dark:text-white font-bold">
+                <div className="bg-paper-100 dark:bg-ink-800 p-10 rounded-[2rem] border-l-[12px] border-electric-coral relative mt-12 shadow-sm">
+                    <Quote className="absolute top-6 right-8 text-electric-coral opacity-20" size={50} />
+                    <p className="text-2xl md:text-3xl font-serif italic text-ink-950 dark:text-white font-black leading-snug">
                         "{content.philosophy}"
                     </p>
                 </div>
