@@ -108,7 +108,7 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
                 {/* Main Card with Placeholder Background */}
                 <div className="relative w-full h-full bg-slate-200 dark:bg-ink-800 border-4 border-ink-950 dark:border-white rounded-[2.5rem] shadow-pop overflow-hidden rotate-2 hover:rotate-0 transition-all duration-500 z-10 group flex items-center justify-center">
                     
-                    {/* Placeholder Icon (visible only if image fails or before loading) */}
+                    {/* Placeholder Icon */}
                     <div className="absolute inset-0 flex items-center justify-center text-slate-400 dark:text-slate-600 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-ink-900 dark:to-ink-800">
                         <User size={120} strokeWidth={1} className="opacity-40" />
                     </div>
@@ -118,7 +118,6 @@ export const Hero: React.FC<HeroProps> = ({ language }) => {
                         alt="Miguel Ángel Jaenes" 
                         className="relative z-20 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                         onError={(e) => {
-                          // Si falla, el icono de fondo ya está ahí. Podemos añadir un borde o log.
                           console.warn("Imagen de perfil no encontrada en la raíz.");
                         }}
                     />
