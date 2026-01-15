@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { HERO_DATA } from '../constants';
+import { HERO_DATA } from '../constants.tsx';
 import { Mail, Linkedin, Sparkles, Rocket, MousePointer2, FileText, User } from 'lucide-react';
-import { Language } from '../types';
+import { Language } from '../types.ts';
 
 interface HeroProps {
   language: Language;

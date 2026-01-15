@@ -1,7 +1,8 @@
+
 import React from 'react';
-import { PROJECTS, UI_TEXT } from '../constants';
+import { PROJECTS, UI_TEXT } from '../constants.tsx';
 import { ArrowUpRight } from 'lucide-react';
-import { Language } from '../types';
+import { Language } from '../types.ts';
 
 interface ProjectsProps {
   language: Language;

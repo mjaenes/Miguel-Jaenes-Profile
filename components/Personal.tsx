@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { PERSONAL_DATA, UI_TEXT } from '../constants';
-import { Language } from '../types';
+import { PERSONAL_DATA, UI_TEXT } from '../constants.tsx';
+import { Language } from '../types.ts';
 
 interface PersonalProps {
   language: Language;

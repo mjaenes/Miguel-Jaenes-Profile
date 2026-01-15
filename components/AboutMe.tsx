@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { ABOUT_ME } from '../constants';
+import { ABOUT_ME } from '../constants.tsx';
 import { Quote, User } from 'lucide-react';
-import { Language } from '../types';
+import { Language } from '../types.ts';
 
 interface AboutMeProps {
   language: Language;

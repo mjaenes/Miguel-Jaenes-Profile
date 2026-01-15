@@ -1,7 +1,8 @@
+
 import React from 'react';
-import { VALUE_PROP } from '../constants';
+import { VALUE_PROP } from '../constants.tsx';
 import { Brain, Code, LineChart, ArrowRight, Zap } from 'lucide-react';
-import { Language } from '../types';
+import { Language } from '../types.ts';
 
 interface ValuePropProps {
   language: Language;

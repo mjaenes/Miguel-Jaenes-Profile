@@ -1,17 +1,17 @@
 
 import React, { useState, useEffect } from 'react';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { AboutMe } from './components/AboutMe';
-import { Personal } from './components/Personal';
-import { StatsSection } from './components/StatsSection';
-import { ValueProp } from './components/ValueProp';
-import { Projects } from './components/Projects';
-import { Skills } from './components/Skills';
-import { ExperienceTimeline } from './components/ExperienceTimeline';
-import { Testimonials } from './components/Testimonials';
-import { Contact } from './components/Contact';
-import { Language } from './types';
+import { Header } from './components/Header.tsx';
+import { Hero } from './components/Hero.tsx';
+import { AboutMe } from './components/AboutMe.tsx';
+import { Personal } from './components/Personal.tsx';
+import { StatsSection } from './components/StatsSection.tsx';
+import { ValueProp } from './components/ValueProp.tsx';
+import { Projects } from './components/Projects.tsx';
+import { Skills } from './components/Skills.tsx';
+import { ExperienceTimeline } from './components/ExperienceTimeline.tsx';
+import { Testimonials } from './components/Testimonials.tsx';
+import { Contact } from './components/Contact.tsx';
+import { Language } from './types.ts';
 
 function App() {
   const [theme, setTheme] = useState('light');

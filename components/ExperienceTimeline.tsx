@@ -1,7 +1,8 @@
+
 import React from 'react';
-import { EXPERIENCES, UI_TEXT } from '../constants';
+import { EXPERIENCES, UI_TEXT } from '../constants.tsx';
 import { Calendar, MapPin, Briefcase } from 'lucide-react';
-import { Language } from '../types';
+import { Language } from '../types.ts';
 
 interface ExperienceTimelineProps {
   language: Language;

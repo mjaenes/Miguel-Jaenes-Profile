@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon, Globe } from 'lucide-react';
-import { Language } from '../types';
+import { Language } from '../types.ts';
 
 interface HeaderProps {
   theme: string;

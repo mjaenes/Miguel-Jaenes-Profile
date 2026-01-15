@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
 import { Mail, Linkedin, Send, Coffee } from 'lucide-react';
-import { Language } from '../types';
-import { UI_TEXT } from '../constants';
+import { Language } from '../types.ts';
+import { UI_TEXT } from '../constants.tsx';
 
 interface ContactProps {
   language: Language;

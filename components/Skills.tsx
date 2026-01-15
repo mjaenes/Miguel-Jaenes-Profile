@@ -1,6 +1,7 @@
+
 import React, { useEffect, useRef, useState } from 'react';
-import { SKILLS, UI_TEXT } from '../constants';
-import { Language } from '../types';
+import { SKILLS, UI_TEXT } from '../constants.tsx';
+import { Language } from '../types.ts';
 
 interface SkillsProps {
   language: Language;

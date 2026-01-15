@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
-import { TESTIMONIALS, UI_TEXT } from '../constants';
-import { Language } from '../types';
+import { TESTIMONIALS, UI_TEXT } from '../constants.tsx';
+import { Language } from '../types.ts';
 import { Linkedin } from 'lucide-react';
 
 interface TestimonialsProps {

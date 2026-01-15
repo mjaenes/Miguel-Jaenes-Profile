@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ExperienceItem, SkillCategory, ProjectItem, TestimonialItem, LocalizedContent } from './types';
+import { ExperienceItem, SkillCategory, ProjectItem, TestimonialItem, LocalizedContent } from './types.ts';
 import { 
   BarChart3, 
   Target, 

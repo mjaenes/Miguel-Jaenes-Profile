@@ -1,8 +1,9 @@
+
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 import { Activity, Users, DollarSign, TrendingUp } from 'lucide-react';
-import { Language } from '../types';
-import { UI_TEXT } from '../constants';
+import { Language } from '../types.ts';
+import { UI_TEXT } from '../constants.tsx';
 
 const spendData = [
   { year: '2024', gasto: 3.81 },
