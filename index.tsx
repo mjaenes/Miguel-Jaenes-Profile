@@ -906,7 +906,7 @@ const ValueProp: React.FC<{ language: Language }> = ({ language }) => {
 
 const Skills: React.FC<{ language: Language }> = ({ language }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
+  const [selectedSkill, setSelectedSkill] = useState(null); // Fixed: Removed <string>
   const sectionRef = useRef<HTMLDivElement>(null);
   const content = SKILLS[language];
   const ui = UI_TEXT[language];
@@ -1406,7 +1406,7 @@ const Projects: React.FC<{ language: Language }> = ({ language }) => {
 const Testimonials: React.FC<{ language: Language }> = ({ language }) => {
   const content = TESTIMONIALS[language];
   const ui = UI_TEXT[language];
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [expandedIndex, setExpandedIndex] = useState(null); // Fixed: Removed <number | null>
 
   const toggleExpand = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
