@@ -1702,19 +1702,19 @@ function App() {
 
       <div className="relative z-10">
         {/* Pass props normally, types are inferred by TypeScript compiler but runtime is JS */}
-        <Header theme={theme} toggleTheme={toggleTheme} language={language as Language} toggleLanguage={toggleLanguage} />
+        <Header theme={theme} toggleTheme={toggleTheme} language={language} toggleLanguage={toggleLanguage} />
         <main>
-          <Hero language={language as Language} />
-          <AboutMe language={language as Language} />
-          <Personal language={language as Language} />
-          <StatsSection theme={theme} language={language as Language} />
-          <ValueProp language={language as Language} />
-          <Projects language={language as Language} />
-          <Skills language={language as Language} />
-          <ExperienceTimeline language={language as Language} />
-          <Testimonials language={language as Language} />
+          <Hero language={language} />
+          <AboutMe language={language} />
+          <Personal language={language} />
+          <StatsSection theme={theme} language={language} />
+          <ValueProp language={language} />
+          <Projects language={language} />
+          <Skills language={language} />
+          <ExperienceTimeline language={language} />
+          <Testimonials language={language} />
         </main>
-        <Contact language={language as Language} />
+        <Contact language={language} />
       </div>
     </div>
   );
