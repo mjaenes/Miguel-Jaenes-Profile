@@ -906,7 +906,8 @@ const ValueProp: React.FC<{ language: Language }> = ({ language }) => {
 
 const Skills: React.FC<{ language: Language }> = ({ language }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [selectedSkill, setSelectedSkill] = useState(null); // Fixed: Removed <string>
+  // Removed Generic <string | null> to fix Babel Standalone ReferenceError
+  const [selectedSkill, setSelectedSkill] = useState(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const content = SKILLS[language];
   const ui = UI_TEXT[language];
@@ -1406,7 +1407,8 @@ const Projects: React.FC<{ language: Language }> = ({ language }) => {
 const Testimonials: React.FC<{ language: Language }> = ({ language }) => {
   const content = TESTIMONIALS[language];
   const ui = UI_TEXT[language];
-  const [expandedIndex, setExpandedIndex] = useState(null); // Fixed: Removed <number | null>
+  // Removed Generic <number | null> to fix Babel Standalone ReferenceError
+  const [expandedIndex, setExpandedIndex] = useState(null);
 
   const toggleExpand = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -1605,7 +1607,7 @@ const Personal: React.FC<{ language: Language }> = ({ language }) => {
 
 function App() {
   const [theme, setTheme] = useState('light');
-  // Fixed: Removed <Language> generic type to avoid Babel syntax errors
+  // Removed Generic <Language> to fix Babel Standalone ReferenceError
   const [language, setLanguage] = useState('es');
 
   useEffect(() => {
@@ -1655,20 +1657,20 @@ function App() {
       </div>
 
       <div className="relative z-10">
-        {/* Fixed: Removed "as Language" casting */}
-        <Header theme={theme} toggleTheme={toggleTheme} language={language} toggleLanguage={toggleLanguage} />
+        {/* Pass props normally, types are inferred by TypeScript compiler but runtime is JS */}
+        <Header theme={theme} toggleTheme={toggleTheme} language={language as Language} toggleLanguage={toggleLanguage} />
         <main>
-          <Hero language={language} />
-          <AboutMe language={language} />
-          <Personal language={language} />
-          <StatsSection theme={theme} language={language} />
-          <ValueProp language={language} />
-          <Projects language={language} />
-          <Skills language={language} />
-          <ExperienceTimeline language={language} />
-          <Testimonials language={language} />
+          <Hero language={language as Language} />
+          <AboutMe language={language as Language} />
+          <Personal language={language as Language} />
+          <StatsSection theme={theme} language={language as Language} />
+          <ValueProp language={language as Language} />
+          <Projects language={language as Language} />
+          <Skills language={language as Language} />
+          <ExperienceTimeline language={language as Language} />
+          <Testimonials language={language as Language} />
         </main>
-        <Contact language={language} />
+        <Contact language={language as Language} />
       </div>
     </div>
   );
