@@ -8,7 +8,8 @@ import {
   BarChart3, Target, Users, Database, Globe, Camera, Plane, BookOpen, Coffee,
   Mail, Linkedin, Sparkles, Rocket, MousePointer2, FileText, User,
   Activity, DollarSign, TrendingUp, Brain, Code, LineChart, ArrowRight, Zap,
-  Calendar, MapPin, Briefcase, Send, Menu, X, Sun, Moon, ArrowUpRight, Quote
+  Calendar, MapPin, Briefcase, Send, Menu, X, Sun, Moon, ArrowUpRight, Quote,
+  Check, Terminal, Hash
 } from 'lucide-react';
 
 // ==========================================
@@ -844,57 +845,100 @@ const ValueProp: React.FC<{ language: Language }> = ({ language }) => {
                 </div>
             </div>
 
-            {/* Professional Schematic Diagram */}
-            <div className="lg:w-1/2 w-full flex justify-center">
-                <div className="relative w-full max-w-md p-6">
-                    <div className="flex items-center justify-between relative">
-                        {/* Connecting Line */}
-                        <div className="absolute top-1/2 left-0 w-full h-1 bg-slate-300 dark:bg-slate-700 -z-10 transform -translate-y-1/2"></div>
+            {/* Hybrid Capabilities Card (Replacement for Rocket Diagram) */}
+            <div className="lg:w-1/2 w-full">
+                <div className="relative group perspective-1000">
+                    {/* Background Glow */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-electric-violet to-electric-cyan rounded-[2rem] blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
 
-                        {/* Node 1: Business */}
-                        <div className="flex flex-col items-center gap-4 group">
-                            <div className="w-24 h-24 bg-white dark:bg-ink-900 border-4 border-electric-coral rounded-2xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
-                                <Brain size={40} className="text-electric-coral" />
+                    <div className="relative bg-white dark:bg-ink-900 border-2 border-ink-950 dark:border-white rounded-[2rem] overflow-hidden shadow-pop transform transition-transform duration-500 group-hover:scale-[1.01]">
+                        
+                        {/* Header */}
+                        <div className="bg-ink-950 dark:bg-white p-5 border-b-2 border-ink-950 dark:border-gray-200 flex justify-between items-center">
+                            <p className="font-black text-white dark:text-ink-950 uppercase tracking-widest text-sm flex items-center gap-2">
+                                <Rocket size={16} className="text-electric-yellow" />
+                                {language === 'es' ? 'Capacidades Híbridas' : 'Hybrid Capabilities'}
+                            </p>
+                            <div className="flex gap-1.5">
+                                <div className="w-3 h-3 rounded-full bg-electric-coral"></div>
+                                <div className="w-3 h-3 rounded-full bg-electric-yellow"></div>
+                                <div className="w-3 h-3 rounded-full bg-electric-cyan"></div>
                             </div>
-                            <span className="font-black text-ink-950 dark:text-white uppercase tracking-wider text-sm bg-white dark:bg-ink-900 px-2 py-1 rounded border border-slate-200 dark:border-slate-700">
-                                {language === 'es' ? 'Negocio' : 'Business'}
-                            </span>
                         </div>
 
-                        {/* Center Node: The Bridge (Me) */}
-                        <div className="flex flex-col items-center gap-2 relative z-10 group">
-                            {/* Animated pulses */}
-                            <div className="absolute top-1/2 left-1/2 w-full h-1 bg-electric-violet/50 blur-sm animate-pulse -translate-x-1/2 -translate-y-1/2"></div>
-                            
-                            <div className="w-32 h-32 bg-ink-950 dark:bg-white rounded-full border-4 border-electric-yellow flex flex-col items-center justify-center shadow-pop-hover transform hover:scale-110 transition-transform cursor-crosshair relative overflow-hidden">
-                                <div className="absolute inset-0 bg-electric-violet/20 animate-pulse"></div>
-                                <span className="text-4xl relative z-10">🚀</span>
-                                <span className="font-black text-white dark:text-ink-950 text-xl relative z-10">
-                                    {language === 'es' ? 'YO' : 'ME'}
-                                </span>
+                        <div className="flex flex-col md:flex-row">
+                            {/* Left: Strategy / Business */}
+                            <div className="flex-1 p-8 border-b-2 md:border-b-0 md:border-r-2 border-slate-100 dark:border-slate-800 bg-paper-50 dark:bg-ink-900">
+                                <div className="flex items-center gap-3 mb-6">
+                                    <div className="p-2 bg-electric-violet text-white rounded-lg">
+                                        <Briefcase size={20} />
+                                    </div>
+                                    <h4 className="font-serif font-black text-xl text-ink-950 dark:text-white">Business</h4>
+                                </div>
+                                <ul className="space-y-4">
+                                    <li className="flex items-start gap-3">
+                                        <Check size={18} className="text-electric-violet mt-0.5 shrink-0" />
+                                        <span className="text-slate-700 dark:text-slate-300 text-sm font-medium">
+                                            {language === 'es' ? 'Auditoría de Rentabilidad (P&L)' : 'Profitability Audit (P&L)'}
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <Check size={18} className="text-electric-violet mt-0.5 shrink-0" />
+                                        <span className="text-slate-700 dark:text-slate-300 text-sm font-medium">
+                                            {language === 'es' ? 'Modelado de LTV & CAC' : 'LTV & CAC Modeling'}
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <Check size={18} className="text-electric-violet mt-0.5 shrink-0" />
+                                        <span className="text-slate-700 dark:text-slate-300 text-sm font-medium">
+                                            {language === 'es' ? 'Planificación de Medios' : 'Media Planning'}
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <Check size={18} className="text-electric-violet mt-0.5 shrink-0" />
+                                        <span className="text-slate-700 dark:text-slate-300 text-sm font-medium">
+                                            {language === 'es' ? 'Defensa de Marca' : 'Brand Defense Strategy'}
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
-                             <span className="font-black text-electric-violet uppercase tracking-wider text-xs bg-electric-violet/10 px-2 py-1 rounded">
-                                {content.highlight}
-                            </span>
-                        </div>
 
-                        {/* Node 2: Tech */}
-                        <div className="flex flex-col items-center gap-4 group">
-                             <div className="w-24 h-24 bg-white dark:bg-ink-900 border-4 border-electric-cyan rounded-2xl flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform">
-                                <Code size={40} className="text-electric-cyan-700 dark:text-electric-cyan" />
+                            {/* Right: Tech / Execution */}
+                            <div className="flex-1 p-8 bg-slate-50 dark:bg-black/40">
+                                 <div className="flex items-center gap-3 mb-6">
+                                    <div className="p-2 bg-electric-cyan text-ink-950 rounded-lg">
+                                        <Terminal size={20} />
+                                    </div>
+                                    <h4 className="font-serif font-black text-xl text-ink-950 dark:text-white">Tech</h4>
+                                </div>
+                                 <ul className="space-y-4">
+                                    <li className="flex items-start gap-3">
+                                        <Hash size={18} className="text-electric-cyan-700 dark:text-electric-cyan mt-0.5 shrink-0" />
+                                        <span className="text-slate-700 dark:text-slate-300 text-sm font-medium font-mono">
+                                            {language === 'es' ? 'Tracking Server-Side (GTM)' : 'Server-Side Tracking (GTM)'}
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <Hash size={18} className="text-electric-cyan-700 dark:text-electric-cyan mt-0.5 shrink-0" />
+                                        <span className="text-slate-700 dark:text-slate-300 text-sm font-medium font-mono">
+                                            {language === 'es' ? 'Automatización (Scripts)' : 'Automation (Scripts)'}
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <Hash size={18} className="text-electric-cyan-700 dark:text-electric-cyan mt-0.5 shrink-0" />
+                                        <span className="text-slate-700 dark:text-slate-300 text-sm font-medium font-mono">
+                                            {language === 'es' ? 'Consultas SQL / BigQuery' : 'SQL / BigQuery Queries'}
+                                        </span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <Hash size={18} className="text-electric-cyan-700 dark:text-electric-cyan mt-0.5 shrink-0" />
+                                        <span className="text-slate-700 dark:text-slate-300 text-sm font-medium font-mono">
+                                            {language === 'es' ? 'Integración de APIs' : 'API Integrations'}
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
-                            <span className="font-black text-ink-950 dark:text-white uppercase tracking-wider text-sm bg-white dark:bg-ink-900 px-2 py-1 rounded border border-slate-200 dark:border-slate-700">
-                                Tech
-                            </span>
                         </div>
-                    </div>
-
-                    {/* Data Flow Arrows */}
-                    <div className="absolute top-[40%] left-[25%] text-slate-400 dark:text-slate-500 animate-float-delayed">
-                        <ArrowRight size={24} />
-                    </div>
-                    <div className="absolute top-[40%] right-[25%] text-slate-400 dark:text-slate-500 animate-float">
-                        <ArrowRight size={24} />
                     </div>
                 </div>
             </div>

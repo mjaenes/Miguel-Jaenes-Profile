@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { VALUE_PROP } from '../constants.tsx';
-import { Brain, Code, LineChart, ArrowRight, Zap } from 'lucide-react';
+import { Brain, Code, LineChart, Users, Database, BarChart3, ArrowRight } from 'lucide-react';
 import { Language } from '../types.ts';
 
 interface ValuePropProps {
@@ -45,7 +45,7 @@ export const ValueProp: React.FC<ValuePropProps> = ({ language }) => {
                 </div>
             </div>
 
-            {/* Professional Schematic Diagram */}
+            {/* Professional Schematic Diagram (Restored) */}
             <div className="lg:w-1/2 w-full flex justify-center">
                 <div className="relative w-full max-w-md p-6">
                     <div className="flex items-center justify-between relative">
