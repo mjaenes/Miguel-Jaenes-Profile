@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miguel Ángel Jaenes Ordóñez | MAJO</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
     <script type="importmap">
     {
       "imports": {
@@ -20,14 +18,36 @@
     }
     </script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <style>
-      body { background-color: #fffbf0; margin: 0; }
-      #root { min-height: 100vh; }
-    </style>
-  </head>
-  <body>
+</head>
+<body>
     <div id="root"></div>
 
-    <script type="text/babel" data-type="module" src="./app.js"></script>
-  </body>
+    <script type="text/babel" data-type="module">
+        import React, { useState } from 'react';
+        import { createRoot } from 'react-dom/client';
+        import { Rocket, Linkedin, FileText, Sparkles } from 'lucide-react';
+
+        // COMPONENTE SIMPLIFICADO PARA PROBAR
+        const App = () => {
+            return (
+                <div className="min-h-screen bg-[#fffbf0] flex flex-col items-center justify-center p-10 text-center">
+                    <h1 className="text-5xl font-bold text-slate-900 mb-4">
+                        Miguel Ángel Jaenes Ordóñez
+                    </h1>
+                    <p className="text-xl text-slate-600 mb-8">
+                        Performance Marketing | Paid Media | Growth
+                    </p>
+                    <div className="flex gap-4">
+                        <div className="px-6 py-3 bg-violet-600 text-white rounded-xl font-bold shadow-lg">
+                           La web se está cargando...
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const root = createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
 </html>
