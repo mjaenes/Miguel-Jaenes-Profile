@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MAJO | Debug Mode</title>
+    <title>Miguel Ángel Jaenes Ordóñez | MAJO</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
     <script type="importmap">
     {
       "imports": {
-        "react": "https://esm.sh/react@18.2.0?dev",
-        "react-dom": "https://esm.sh/react-dom@18.2.0?dev",
-        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?dev",
-        "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime?dev",
+        "react": "https://esm.sh/react@18.2.0",
+        "react-dom": "https://esm.sh/react-dom@18.2.0",
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+        "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
         "recharts": "https://esm.sh/recharts@2.12.2?external=react,react-dom",
         "lucide-react": "https://esm.sh/lucide-react@0.344.0?external=react"
       }
@@ -23,16 +25,18 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <style>
-      body { background-color: #fffbf0; margin: 0; }
+      body { background-color: #fffbf0; color: #0f172a; margin: 0; }
       #root { min-height: 100vh; }
     </style>
   </head>
   <body>
     <div id="root"></div>
+
     <script type="text/babel" data-type="module">
       import React from 'react';
       import { createRoot } from 'react-dom/client';
-      import App from './index.tsx'; // Intentamos cargar tu componente
+      // Importamos el archivo que renombraste a app.js
+      import App from './app.js'; 
 
       const container = document.getElementById('root');
       const root = createRoot(container);
