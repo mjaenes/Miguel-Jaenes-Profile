@@ -2,15 +2,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, AreaChart, Area
 } from 'recharts';
 import {
-  BarChart3, Target, Users, Database, Globe, Camera, Plane, BookOpen, Coffee,
+  BarChart3, Target, Users, Database, Globe, Plane, BookOpen, Coffee,
   Mail, Linkedin, Sparkles, Rocket, MousePointer2, FileText, User,
   Activity, DollarSign, TrendingUp, Briefcase, Check, Terminal, Hash,
   ArrowUpRight, Quote, Send, Menu, X, Sun, Moon,
-  // Added missing icons
-  Brain, Code, LineChart, MapPin
+  Brain, Code, LineChart, MapPin, Palette
 } from 'lucide-react';
 
 // ==========================================
@@ -67,7 +66,7 @@ export const HERO_DATA = {
     badge: "👋 Miguel A. Jaenes Ordóñez",
     cta: "Contactar ahora",
     cvCta: "Descargar CV",
-    social: "Gestionando presupuestos de +£12M/año.",
+    social: "Gestionando presupuestos de +£14M/año.",
     card1: "Growth Strategy",
     card2: "Data Analytics"
   },
@@ -79,7 +78,7 @@ export const HERO_DATA = {
     badge: "👋 Miguel A. Jaenes Ordóñez",
     cta: "Contact me",
     cvCta: "Download CV",
-    social: "Managing +£12M/year budgets.",
+    social: "Managing +£14M/year budgets.",
     card1: "Growth Strategy",
     card2: "Data Analytics"
   }
@@ -91,8 +90,8 @@ export const PERSONAL_DATA = {
     subtitle: "Mis pasiones y lo que me mantiene inspirado.",
     items: [
       { title: "Viajero", desc: "Explorador de nuevas culturas y gastronomía internacional.", icon: <Plane className="w-6 h-6" />, color: "bg-electric-cyan" },
-      { title: "Fotografía", desc: "Capturando la esencia de los momentos y la luz natural.", icon: <Camera className="w-6 h-6" />, color: "bg-electric-coral" },
-      { title: "Lector", desc: "Apasionado de la historia, la ficción y el crecimiento personal.", icon: <BookOpen className="w-6 h-6" />, color: "bg-electric-lime" },
+      { title: "Arte", desc: "Pintura, diseño de interiores, arquitectura y la esencia de la luz natural.", icon: <Palette className="w-6 h-6" />, color: "bg-electric-coral" },
+      { title: "Curiosidad Incansable", desc: "Crecimiento personal, lectura y aprendizaje continuo.", icon: <BookOpen className="w-6 h-6" />, color: "bg-electric-lime" },
       { title: "Café", desc: "En una misión constante por encontrar el espresso perfecto.", icon: <Coffee className="w-6 h-6" />, color: "bg-electric-yellow" }
     ]
   },
@@ -101,8 +100,8 @@ export const PERSONAL_DATA = {
     subtitle: "My passions and what keeps me inspired.",
     items: [
       { title: "Traveler", desc: "Explorer of new cultures and international gastronomy.", icon: <Plane className="w-6 h-6" />, color: "bg-electric-cyan" },
-      { title: "Photography", desc: "Capturing the essence of moments and natural light.", icon: <Camera className="w-6 h-6" />, color: "bg-electric-coral" },
-      { title: "Reader", desc: "Passionate about history, fiction, and personal growth.", icon: <BookOpen className="w-6 h-6" />, color: "bg-electric-lime" },
+      { title: "Art", desc: "Painting, interior design, architecture, and the essence of natural light.", icon: <Palette className="w-6 h-6" />, color: "bg-electric-coral" },
+      { title: "Insatiable Curiosity", desc: "Personal growth, reading, and continuous learning.", icon: <BookOpen className="w-6 h-6" />, color: "bg-electric-lime" },
       { title: "Coffee", desc: "On a constant mission to find the perfect espresso.", icon: <Coffee className="w-6 h-6" />, color: "bg-electric-yellow" }
     ]
   }
@@ -193,7 +192,7 @@ export const EXPERIENCES = {
       description: "Liderazgo de la estrategia de adquisición en mercados altamente competitivos (UK, ES, DK). Transformación de canales PPC Web, GAC y ASA.",
       achievements: [
         "Eficiencia Radical (PPC Web UK): Reducción del gasto de £3.8M a £2.08M (-45%) manteniendo volumen.",
-        "Escalado App (GAC): Crecimiento +130% YoY en nuevos jugadores (NDPs).",
+        "Escalado App (GAC): Crecimiento +130% YoY en nuevos jugadores (Net Deposit).",
         "Consolidación ASA: Protección de marca y ROI cubierto en 1.3 años.",
         "Gestión de presupuestos multimillonarios (+£12M anuales) y equipos multidisciplinares."
       ]
@@ -246,7 +245,7 @@ export const EXPERIENCES = {
       description: "Leading acquisition strategy in highly competitive markets (UK, ES, DK). Transforming PPC Web, GAC, and ASA channels.",
       achievements: [
         "Radical Efficiency (PPC Web UK): Spend reduction from £3.8M to £2.08M (-45%) while maintaining volume.",
-        "App Scaling (GAC): +130% YoY growth in New Players (NDPs).",
+        "App Scaling (GAC): +130% YoY growth in New Players (Net Deposit).",
         "ASA Consolidation: Brand protection and ROI covered in 1.3 years.",
         "Managing multi-million budgets (+£12M annually) and multidisciplinary teams."
       ]
@@ -350,7 +349,7 @@ export const PROJECTS = {
       title: "Escalado Google App Campaigns (GAC)",
       description: "Estrategia de crecimiento para la adquisición de usuarios móviles en un entorno de alta volatilidad.",
       technologies: ["Google App Campaigns", "Firebase", "AppsFlyer", "Looker Studio"],
-      contribution: "Logro de un crecimiento del +130% YoY en nuevos jugadores (NDPs). Diseño de señales personalizadas post-install para alimentar el algoritmo de Google."
+      contribution: "Logro de un crecimiento del +130% YoY en nuevos jugadores (Net Deposit). Diseño de señales personalizadas post-install para alimentar el algoritmo de Google."
     },
     {
       title: "Reorganización Apple Search Ads",
@@ -370,7 +369,7 @@ export const PROJECTS = {
       title: "Google App Campaigns Scaling (GAC)",
       description: "Growth strategy for mobile user acquisition in a high-volatility environment.",
       technologies: ["Google App Campaigns", "Firebase", "AppsFlyer", "Looker Studio"],
-      contribution: "Achieved +130% YoY growth in new players (NDPs). Designed custom post-install signals to feed the Google algorithm."
+      contribution: "Achieved +130% YoY growth in new players (Net Deposit). Designed custom post-install signals to feed the Google algorithm."
     },
     {
       title: "Apple Search Ads Reorganization",
@@ -468,8 +467,8 @@ export const UI_TEXT = {
       message: "Mensaje",
       messagePlaceholder: "¿Cómo puedo ayudarte?",
       submit: "Enviar mensaje",
-      sending: "Enviando...",
-      success: "¡Mensaje enviado con éxito!"
+      sending: "Preparando correo...",
+      success: "¡Abre tu cliente de correo para enviar!"
     },
     footer: "Diseñado con enfoque en resultados."
   },
@@ -504,8 +503,8 @@ export const UI_TEXT = {
       message: "Message",
       messagePlaceholder: "How can I help you?",
       submit: "Send message",
-      sending: "Sending...",
-      success: "Message sent successfully!"
+      sending: "Preparing email...",
+      success: "Open your mail client to send!"
     },
     footer: "Designed with a results-oriented approach."
   }
@@ -657,10 +656,10 @@ const StatsSection = ({ theme, language }) => {
   ];
 
   const growthData = [
-    { year: '2022', ndps: 7905 },
-    { year: '2023', ndps: 9500 },
-    { year: '2024', ndps: 10200 },
-    { year: '2025', ndps: 11533 },
+    { year: '2022', netDeposit: 7905 },
+    { year: '2023', netDeposit: 9500 },
+    { year: '2024', netDeposit: 10200 },
+    { year: '2025', netDeposit: 11533 },
   ];
 
   return (
@@ -688,7 +687,7 @@ const StatsSection = ({ theme, language }) => {
                 </div>
                 <h4 className="text-6xl font-black text-ink-950 dark:text-white mb-2 tracking-tighter">-45%</h4>
                 <p className="font-bold text-lg text-electric-violet mb-2">{ui.statsLabels.reduction}</p>
-                <p className="text-slate-600 dark:text-slate-300 text-sm">PPC UK: £3.8M → £2.08M</p>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">PPC Search Web: Reducción de £1.72M</p>
             </div>
 
             {/* Card 2 - Lime */}
@@ -738,11 +737,7 @@ const StatsSection = ({ theme, language }) => {
                                 tickLine={false} 
                                 axisLine={false} 
                             />
-                            <Tooltip 
-                                contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
-                                cursor={{fill: 'transparent'}}
-                                formatter={(value: number) => [`£${value}M`, 'Gasto']}
-                            />
+                            {/* Tooltip removed to hide values as requested */}
                             <Bar dataKey="gasto" fill="#fb7185" radius={[8, 8, 8, 8]} barSize={50} />
                         </BarChart>
                     </ResponsiveContainer>
@@ -760,7 +755,7 @@ const StatsSection = ({ theme, language }) => {
                     <ResponsiveContainer width="100%" height="100%">
                         <AreaChart data={growthData}>
                             <defs>
-                                <linearGradient id="colorNdps" x1="0" y1="0" x2="0" y2="1">
+                                <linearGradient id="colorNetDeposit" x1="0" y1="0" x2="0" y2="1">
                                     <stop offset="5%" stopColor="#a3e635" stopOpacity={0.8}/>
                                     <stop offset="95%" stopColor="#a3e635" stopOpacity={0}/>
                                 </linearGradient>
@@ -768,10 +763,8 @@ const StatsSection = ({ theme, language }) => {
                             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke={isDark ? '#334155' : '#e2e8f0'} />
                             <XAxis dataKey="year" stroke={isDark ? '#94a3b8' : '#64748b'} tickLine={false} axisLine={false} />
                             <YAxis stroke={isDark ? '#94a3b8' : '#64748b'} tickLine={false} axisLine={false} />
-                            <Tooltip 
-                                contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
-                            />
-                            <Area type="monotone" dataKey="ndps" stroke="#a3e635" strokeWidth={4} fillOpacity={1} fill="url(#colorNdps)" />
+                            {/* Tooltip removed to hide values as requested */}
+                            <Area type="monotone" dataKey="netDeposit" stroke="#a3e635" strokeWidth={4} fillOpacity={1} fill="url(#colorNetDeposit)" />
                         </AreaChart>
                     </ResponsiveContainer>
                 </div>
@@ -1098,14 +1091,13 @@ const Contact = ({ language }) => {
       `Mensaje:\n${formData.message}`
     );
     
-    // Pequeño delay para feedback visual
-    setTimeout(() => {
-      window.location.href = `mailto:${emailTo}?subject=${subject}&body=${body}`;
-      setIsSubmitting(false);
-      setIsSent(true);
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setIsSent(false), 5000);
-    }, 800);
+    // Ejecutar inmediatamente para evitar bloqueos de popup
+    window.location.href = `mailto:${emailTo}?subject=${subject}&body=${body}`;
+    
+    setIsSubmitting(false);
+    setIsSent(true);
+    setFormData({ name: '', email: '', message: '' });
+    setTimeout(() => setIsSent(false), 5000);
   };
 
   return (
